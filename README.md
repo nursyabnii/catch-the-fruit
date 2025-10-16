@@ -31,14 +31,14 @@ Game ini sepenuhnya responsif dan dapat dimainkan di desktop maupun perangkat se
 ## 🚀 Cara Menjalankan Secara Lokal
 1. Untuk memainkan game ini di komputer Anda sendiri, ikuti langkah-langkah sederhana ini:
 2. Unduh atau Clone Repositori
-``git clone https://github.com/NAMA_USER_ANDA/NAMA_REPO_ANDA.git`` Atau unduh file ZIP dan ekstrak.
+```git clone https://github.com/NAMA_USER_ANDA/NAMA_REPO_ANDA.git``` Atau unduh file ZIP dan ekstrak.
 3. Buka Folder Proyek Navigasi ke direktori tempat Anda menyimpan file proyek.
 4. Buka index.html Cukup klik dua kali pada file index.html. File tersebut akan terbuka di browser web default Anda dan game siap dimainkan!
 
-``
+```
 📂 Struktur File
 tangkap-buah-neon/
 ├── index.html      # File utama HTML
 ├── style.css       # File styling CSS
 └── script.js       # File logika game JavaScript
-``
+```
