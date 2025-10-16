@@ -1,0 +1,201 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+/* Dasar halaman */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+    /* Latar belakang gradient gelap untuk tema neon */
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+/* Kontainer dan Canvas */
+#gameContainer,
+#gameCanvas,
+#uiLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#uiLayer {
+    pointer-events: none;
+    /* Biarkan klik menembus lapisan UI */
+}
+
+/* Efek Neon untuk Teks */
+.neon-text {
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #00aeff,
+        0 0 20px #00aeff,
+        0 0 25px #00aeff,
+        0 0 30px #00aeff,
+        0 0 35px #00aeff;
+}
+
+/* UI saat bermain */
+#scoreBoard,
+#lifeCounter,
+#missedCounter {
+    position: absolute;
+    top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
+}
+
+#scoreBoard {
+    left: 20px;
+}
+
+#lifeCounter {
+    right: 20px;
+}
+
+#missedCounter {
+    top: 65px;
+    right: 20px;
+    font-size: 1.5em;
+}
+
+/* Menu (Start, Game Over, Pause) */
+#startMenu,
+#gameOverMenu,
+#pauseOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    pointer-events: auto;
+    /* Aktifkan interaksi untuk menu */
+
+    /* Efek Glassmorphism (kaca buram) */
+    background: rgba(15, 12, 41, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+h1 span {
+    /* Untuk kata NEON */
+    color: #00f6ff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #00f6ff, 0 0 30px #00f6ff;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #ff4d4d;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+}
+
+.instructions {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.instructions b {
+    color: #00f6ff;
+}
+
+.instructions ul {
+    padding-left: 20px;
+}
+
+
+/* Tombol dengan Gaya Neon */
+button {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #fff;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff;
+}
+
+#startButton {
+    border-color: #00ff9d;
+    color: #00ff9d;
+}
+
+#startButton:hover {
+    background: #00ff9d;
+    box-shadow: 0 0 20px #00ff9d;
+}
+
+#restartButton {
+    border-color: #ff9d00;
+    color: #ff9d00;
+}
+
+#restartButton:hover {
+    background: #ff9d00;
+    box-shadow: 0 0 20px #ff9d00;
+}
+
+#pauseButton {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1em;
+    pointer-events: auto;
+    border-color: #f0ad4e;
+    color: #f0ad4e;
+}
+
+#pauseButton:hover {
+    background: #f0ad4e;
+    box-shadow: 0 0 20px #f0ad4e;
+}
+
+
+/* Kelas utilitas */
+.hidden {
+    display: none;
+}
